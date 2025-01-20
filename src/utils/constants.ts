@@ -1,0 +1,30 @@
+// Audio Analysis Constants
+export const AUDIO_CONSTANTS = {
+  FFT_SIZE: 2048,
+  SMOOTHING_TIME_CONSTANT: 0.8,
+  MIN_DECIBELS: -90,
+  MAX_DECIBELS: -10,
+  SAMPLE_RATE: 44100
+} as const;
+
+// Engagement Thresholds
+export const ENGAGEMENT_THRESHOLDS = {
+  PHYSICAL: { WARNING: 30, CRITICAL: 20 },
+  EMOTIONAL: { WARNING: 35, CRITICAL: 25 },
+  MENTAL: { WARNING: 40, CRITICAL: 30 },
+  SPIRITUAL: { WARNING: 35, CRITICAL: 25 }
+} as const;
+
+// Analysis Settings
+export const ANALYSIS_SETTINGS = {
+  MAX_HISTORY_LENGTH: 50,
+  UPDATE_INTERVAL: 100,
+  PROCESSING_DELAY: 1000
+} as const;
+
+// Audio Processing
+export const AUDIO_SETTINGS = {
+  DEFAULT_SENSITIVITY: 50,
+  DEFAULT_NOISE_THRESHOLD: 30,
+  DEFAULT_UPDATE_INTERVAL: 100
+} as const;

@@ -1,0 +1,71 @@
+:root {
+  /* Main Colors */
+  --color-midnight: #0A0B1E; /* Deep, dark base */
+  --color-neon-purple: #9D34F6; /* Vibrant primary */
+  --color-electric-blue: #4CC9F0; /* Vibrant primary */
+  --color-slate: #2A2D3E; /* Sophisticated mid-tone */
+  --color-mauve: #6B5876; /* Sophisticated mid-tone */
+
+  /* Neon Accents */
+  --color-neon-pink: #FF2A6D;
+  --color-neon-green: #05FFA1;
+  --color-neon-yellow: #FFE74C;
+
+  /* Color Application */
+  --color-background: var(--color-midnight);
+  --color-surface: var(--color-slate);
+  --color-primary: var(--color-neon-purple);
+  --color-secondary: var(--color-electric-blue);
+  --color-accent: var(--color-neon-pink);
+
+  /* Text Colors */
+  --color-text-primary: rgba(255, 255, 255, 0.95);
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-muted: rgba(255, 255, 255, 0.5);
+
+  /* Interactive States */
+  --color-hover: color-mix(in srgb, var(--color-primary) 85%, white);
+  --color-active: color-mix(in srgb, var(--color-primary) 70%, white);
+  --color-focus-ring: var(--color-neon-purple);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, 
+    var(--color-neon-purple) 0%, 
+    var(--color-electric-blue) 100%
+  );
+  --gradient-dark: linear-gradient(135deg, 
+    var(--color-midnight) 0%, 
+    var(--color-slate) 100%
+  );
+
+  /* Animation Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+
+  /* Animation Easings */
+  --ease-bounce: cubic-bezier(0.37, 1.12, 0.18, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Glow Effects */
+  --glow-primary: 0 0 20px rgba(157, 52, 246, 0.5);
+  --glow-accent: 0 0 20px rgba(255, 42, 109, 0.5);
+  --glow-subtle: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: color-mix(in srgb, var(--color-slate) 85%, black);
+    --glow-primary: 0 0 30px rgba(157, 52, 246, 0.6);
+    --glow-accent: 0 0 30px rgba(255, 42, 109, 0.6);
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-secondary: rgba(255, 255, 255, 0.9);
+    --color-text-muted: rgba(255, 255, 255, 0.8);
+  }
+}
