@@ -1,23 +1,9 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
-import { initializeEnvironment } from './utils/initialization';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-// Ensure root element exists
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  const root = document.createElement('div');
-  root.id = 'root';
-  document.body.appendChild(root);
-}
-
-// Create root with error handling
-const root = createRoot(rootElement!);
-
-// Render app with error boundary
-root.render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>
+  </React.StrictMode>
 );
